@@ -1,0 +1,42 @@
+{
+ "creation": "2021-07-11 01:18:17.819922",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "years_from",
+  "years_to",
+  "leave_days_no"
+ ],
+ "fields": [
+  {
+   "fieldname": "leave_days_no",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Leave Days NO"
+  },
+  {
+   "fieldname": "years_from",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "From"
+  },
+  {
+   "fieldname": "years_to",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "To"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-09-06 02:55:01.697842",
+ "modified_by": "Administrator",
+ "module": "HRIS",
+ "name": "Leave Category",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

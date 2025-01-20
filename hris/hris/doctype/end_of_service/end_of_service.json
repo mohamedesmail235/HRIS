@@ -1,0 +1,528 @@
+{
+ "actions": [],
+ "autoname": "format:{employee}-{relieving_date}",
+ "creation": "2023-08-31 08:39:11.712508",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "joining_date",
+  "contract_type",
+  "reason_for_leaving",
+  "column_break_3",
+  "form_type",
+  "relieving_date",
+  "last_joining_day",
+  "payroll_date",
+  "ignore_loan",
+  "contract_details_section",
+  "contract",
+  "deduct_days_from_service_period",
+  "column_break_11",
+  "contract_start_date",
+  "contract_end_date",
+  "column_break_9",
+  "contract_duration",
+  "yearly_vacation",
+  "duration_from_last_joining_date_section",
+  "adj_years",
+  "column_break_19",
+  "adj_months",
+  "column_break_20",
+  "adj_days",
+  "duration_of_employee_service_section",
+  "years",
+  "column_break_8",
+  "months",
+  "column_break_10",
+  "days",
+  "leave_details_section",
+  "leave_balance",
+  "column_break_24",
+  "current_leave_balance",
+  "column_break_25",
+  "leave_without_pay",
+  "financial_earnings_section",
+  "get_earnings",
+  "salary_slip_components_section",
+  "earning",
+  "column_break_41",
+  "deduction",
+  "column_break_9iiww",
+  "absent_days",
+  "late_time_minutes",
+  "over_time_hours",
+  "total_sums_section",
+  "earning_amount",
+  "column_break_46",
+  "deduction_sum",
+  "column_break_48",
+  "net_sum",
+  "components_section",
+  "earnings",
+  "column_break_16",
+  "deductions",
+  "loan_details_section",
+  "totals_section",
+  "gross_pay",
+  "total_principal_amount",
+  "company_share",
+  "column_break_22",
+  "total_deduction",
+  "total_loan_repayment",
+  "total_indemnity",
+  "column_break_18",
+  "net_pay",
+  "total_leave_encashed",
+  "total_net_pay",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Read Only",
+   "label": "Employee Name"
+  },
+  {
+   "fetch_from": "employee.date_of_joining",
+   "fieldname": "joining_date",
+   "fieldtype": "Read Only",
+   "label": "Joining Date"
+  },
+  {
+   "depends_on": "eval:doc.form_type=='End of Service'",
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract Type",
+   "options": "Contract Type"
+  },
+  {
+   "depends_on": "eval:doc.form_type=='End of Service'",
+   "fieldname": "reason_for_leaving",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Reason for Leaving",
+   "options": "Reason for Leaving"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "form_type",
+   "fieldtype": "Select",
+   "label": "Form Type",
+   "options": "End of Service\nAdjustment",
+   "reqd": 1
+  },
+  {
+   "fieldname": "relieving_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Last Working Day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "last_joining_day",
+   "fieldtype": "Date",
+   "label": "Last Joining Day "
+  },
+  {
+   "default": "0",
+   "depends_on": "eval:doc.form_type=='Adjustment'",
+   "fieldname": "ignore_loan",
+   "fieldtype": "Check",
+   "label": "Ignore Loan"
+  },
+  {
+   "fieldname": "contract_details_section",
+   "fieldtype": "Section Break",
+   "label": "Contract Details"
+  },
+  {
+   "fieldname": "contract",
+   "fieldtype": "Link",
+   "label": "Contract",
+   "options": "Employee contract",
+   "read_only": 1
+  },
+  {
+   "fieldname": "deduct_days_from_service_period",
+   "fieldtype": "Float",
+   "label": "Deduct Days from Service Period",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "contract.contract_start_date",
+   "fieldname": "contract_start_date",
+   "fieldtype": "Read Only",
+   "label": "Contract Start Date"
+  },
+  {
+   "fetch_from": "contract.contratc_end_date",
+   "fieldname": "contract_end_date",
+   "fieldtype": "Read Only",
+   "label": "Contract End Date"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "contract.data_7",
+   "fieldname": "contract_duration",
+   "fieldtype": "Read Only",
+   "label": "Contract Duration"
+  },
+  {
+   "fetch_from": "contract.yearly_vacation",
+   "fieldname": "yearly_vacation",
+   "fieldtype": "Read Only",
+   "label": "Yearly Vacation"
+  },
+  {
+   "fieldname": "duration_from_last_joining_date_section",
+   "fieldtype": "Section Break",
+   "label": "Duration From Last Joining date"
+  },
+  {
+   "fieldname": "adj_years",
+   "fieldtype": "Int",
+   "label": "Years",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adj_months",
+   "fieldtype": "Int",
+   "label": "Months",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "adj_days",
+   "fieldtype": "Int",
+   "label": "Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "duration_of_employee_service_section",
+   "fieldtype": "Section Break",
+   "label": "Duration of Employee Service"
+  },
+  {
+   "default": "0",
+   "fieldname": "years",
+   "fieldtype": "Int",
+   "label": "Years",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "months",
+   "fieldtype": "Int",
+   "label": "Months",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "0",
+   "fieldname": "days",
+   "fieldtype": "Int",
+   "label": "Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "leave_details_section",
+   "fieldtype": "Section Break",
+   "label": "Leave Details"
+  },
+  {
+   "fieldname": "leave_balance",
+   "fieldtype": "Float",
+   "label": "Total Leave Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_24",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "current_leave_balance",
+   "fieldtype": "Float",
+   "label": "Current Leave Balance",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_25",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "leave_without_pay",
+   "fieldtype": "Float",
+   "label": "Unpaid Leave",
+   "read_only": 1
+  },
+  {
+   "fieldname": "financial_earnings_section",
+   "fieldtype": "Section Break",
+   "label": "Financial Earnings"
+  },
+  {
+   "fieldname": "get_earnings",
+   "fieldtype": "Button",
+   "label": "Get Earnings"
+  },
+  {
+   "fieldname": "salary_slip_components_section",
+   "fieldtype": "Section Break",
+   "label": "Salary Slip Components as per Contract"
+  },
+  {
+   "fieldname": "earning",
+   "fieldtype": "Table",
+   "label": "Earning",
+   "options": "Salary Detail",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_41",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deduction",
+   "fieldtype": "Table",
+   "label": "Deduction",
+   "options": "Salary Detail",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_sums_section",
+   "fieldtype": "Section Break",
+   "label": "Total Sums"
+  },
+  {
+   "fieldname": "earning_amount",
+   "fieldtype": "Currency",
+   "label": "Earning Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_46",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deduction_sum",
+   "fieldtype": "Currency",
+   "label": "Deduction Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_48",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_sum",
+   "fieldtype": "Currency",
+   "label": "Net Sum",
+   "read_only": 1
+  },
+  {
+   "fieldname": "components_section",
+   "fieldtype": "Section Break",
+   "label": "Components"
+  },
+  {
+   "fieldname": "earnings",
+   "fieldtype": "Table",
+   "label": "Earnings",
+   "options": "Salary Detail"
+  },
+  {
+   "fieldname": "column_break_16",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Deductions",
+   "options": "Salary Detail"
+  },
+  {
+   "fieldname": "loan_details_section",
+   "fieldtype": "Section Break",
+   "label": "Loan Details"
+  },
+  {
+   "fieldname": "totals_section",
+   "fieldtype": "Section Break",
+   "label": "Totals"
+  },
+  {
+   "fieldname": "gross_pay",
+   "fieldtype": "Currency",
+   "label": "Total Earnings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_principal_amount",
+   "fieldtype": "Currency",
+   "label": "Total Loan Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "company_share",
+   "fieldtype": "Currency",
+   "label": "Tickets Company Share",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_22",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_deduction",
+   "fieldtype": "Currency",
+   "label": "Total Deductions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_loan_repayment",
+   "fieldtype": "Currency",
+   "label": "Total Loan Repayment",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.form_type=='End of Service'",
+   "fieldname": "total_indemnity",
+   "fieldtype": "Currency",
+   "label": "Total Indemnity",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "net_pay",
+   "fieldtype": "Currency",
+   "label": "Net Pay",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_leave_encashed",
+   "fieldtype": "Float",
+   "label": "Total Leave Encashed",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_net_pay",
+   "fieldtype": "Float",
+   "label": "Total Net Pay",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "End of Service",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "End of Service",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_9iiww",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "late_time_minutes",
+   "fieldtype": "Data",
+   "label": "Late Time Minutes",
+   "read_only": 1
+  },
+  {
+   "fieldname": "over_time_hours",
+   "fieldtype": "Data",
+   "label": "Over Time Hours",
+   "read_only": 1
+  },
+  {
+   "fieldname": "absent_days",
+   "fieldtype": "Data",
+   "label": "Absence Days",
+   "read_only": 1
+  },
+  {
+   "fieldname": "payroll_date",
+   "fieldtype": "Date",
+   "label": "Payroll Date",
+   "reqd": 1
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-12 14:43:52.710166",
+ "modified_by": "Administrator",
+ "module": "HRIS",
+ "name": "End of Service",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1,
+ "track_seen": 1,
+ "track_views": 1
+}

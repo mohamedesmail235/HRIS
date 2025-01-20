@@ -1,0 +1,314 @@
+{
+ "actions": [],
+ "allow_import": 1,
+ "autoname": "naming_series:",
+ "creation": "2019-11-12 12:25:52.942050",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "contract_number",
+  "statuss",
+  "employee",
+  "contract_type",
+  "employee_full_name",
+  "employee_nationality",
+  "company",
+  "column_break_6",
+  "date_of_agreement",
+  "data_7",
+  "contract_start_date",
+  "contratc_end_date",
+  "salary_template",
+  "salary_data",
+  "salary_detail_section",
+  "salary_structure",
+  "earnings",
+  "total_earnings",
+  "column_break_18",
+  "deductions",
+  "total_deductions",
+  "terms_of_contract_section",
+  "plane_ticket",
+  "social_status",
+  "family_members_count",
+  "ticket",
+  "column_break_26",
+  "health_insurance",
+  "health_insurance_grade",
+  "employee_leave_category",
+  "yearly_vacation",
+  "vacation_caegory",
+  "section_break_30",
+  "contract_terms",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "contract_number",
+   "fieldtype": "Data",
+   "label": "Contract Number",
+   "reqd": 1
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Select",
+   "label": "Contract Type ",
+   "options": "\u0639\u0642\u062f \u0639\u0645\u0644 \u0623\u062c\u0646\u0628\u064a\n\u0639\u0642\u062f \u0639\u0645\u0644 \u0633\u0639\u0648\u062f\u0649",
+   "reqd": 1
+  },
+  {
+   "fieldname": "date_of_agreement",
+   "fieldtype": "Date",
+   "label": "Date of agreement",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_full_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Full Name ",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee_nationality",
+   "fieldtype": "Link",
+   "label": "Employee Nationality",
+   "options": "Nationality",
+   "read_only": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "data_7",
+   "fieldtype": "Int",
+   "label": "Contract Duration",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "contract_start_date",
+   "fieldtype": "Date",
+   "label": "Contract Start Date",
+   "reqd": 1
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "contratc_end_date",
+   "fieldtype": "Date",
+   "label": "Contratc End Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salary_detail_section",
+   "fieldtype": "Section Break",
+   "label": "Salary Detail"
+  },
+  {
+   "fieldname": "earnings",
+   "fieldtype": "Table",
+   "label": "Earnings",
+   "options": "Salary Detail"
+  },
+  {
+   "fieldname": "deductions",
+   "fieldtype": "Table",
+   "label": "Deductions",
+   "options": "Salary Detail"
+  },
+  {
+   "fieldname": "column_break_6",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "terms_of_contract_section",
+   "fieldtype": "Section Break",
+   "label": "Terms of contract"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "plane_ticket",
+   "fieldtype": "Check",
+   "label": "Plane Ticket"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "yearly_vacation",
+   "fieldtype": "Int",
+   "label": "Yearly Vacation",
+   "read_only": 1
+  },
+  {
+   "fieldname": "contract_terms",
+   "fieldtype": "Table",
+   "label": "Contract Terms",
+   "options": "Contract Terms"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "0",
+   "fieldname": "health_insurance",
+   "fieldtype": "Check",
+   "label": "health insurance"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee contract",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_earnings",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": " Total Earnings",
+   "read_only": 1
+  },
+  {
+   "fieldname": "total_deductions",
+   "fieldtype": "Currency",
+   "hidden": 1,
+   "label": "Total Deductions",
+   "read_only": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.plane_ticket==1",
+   "fieldname": "ticket",
+   "fieldtype": "Select",
+   "label": "Ticket ",
+   "options": "\u062f\u0631\u062c\u0629 \u0633\u064a\u0627\u062d\u064a\u0629\n\u062f\u0631\u062c\u0629 \u0623\u0648\u0644\u0649\n\u062f\u0631\u062c\u0629 \u0631\u062c\u0627\u0644 \u0627\u0644\u0627\u0639\u0645\u0627\u0644"
+  },
+  {
+   "allow_on_submit": 1,
+   "depends_on": "eval:doc.health_insurance==1",
+   "fieldname": "health_insurance_grade",
+   "fieldtype": "Select",
+   "label": "Health Insurance Grade",
+   "options": "A\nB\nC"
+  },
+  {
+   "default": "Active",
+   "fieldname": "statuss",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_preview": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "\nActive\nTemporary Leave\nLeft",
+   "reqd": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Serial Number",
+   "options": "EMP-CON.-"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Single",
+   "fieldname": "social_status",
+   "fieldtype": "Select",
+   "label": "Social status",
+   "options": "Single\nWith family"
+  },
+  {
+   "depends_on": "eval:doc.social_status==\"With family\"",
+   "fieldname": "family_members_count",
+   "fieldtype": "Int",
+   "label": "Family Members Count"
+  },
+  {
+   "default": "0",
+   "fieldname": "salary_template",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Salary Template"
+  },
+  {
+   "depends_on": "eval:doc.salary_template =='1'",
+   "fieldname": "salary_data",
+   "fieldtype": "Data",
+   "label": "Salary Data"
+  },
+  {
+   "fieldname": "column_break_26",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "section_break_30",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "vacation_caegory",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Vacation Caegory",
+   "options": "Employee Leave Category"
+  },
+  {
+   "allow_on_submit": 1,
+   "fieldname": "employee_leave_category",
+   "fieldtype": "Link",
+   "label": "Employee Leave Category",
+   "options": "Employee Leave Category",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_18",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "salary_structure",
+   "fieldtype": "Link",
+   "label": "Salary Structure",
+   "options": "Salary Structure"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-09-03 18:58:48.021963",
+ "modified_by": "Administrator",
+ "module": "HRIS",
+ "name": "Employee contract",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "set_user_permissions": 1,
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

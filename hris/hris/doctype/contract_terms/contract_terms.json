@@ -1,0 +1,27 @@
+{
+ "creation": "2019-12-26 13:25:08.242178",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "terms"
+ ],
+ "fields": [
+  {
+   "fieldname": "terms",
+   "fieldtype": "Text Editor",
+   "label": "Terms"
+  }
+ ],
+ "istable": 1,
+ "modified": "2019-12-26 13:25:08.242178",
+ "modified_by": "Administrator",
+ "module": "HRIS",
+ "name": "Contract Terms",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

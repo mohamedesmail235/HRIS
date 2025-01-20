@@ -1,0 +1,201 @@
+{
+ "actions": [],
+ "autoname": "PER/.#####",
+ "creation": "2018-07-09 14:28:06.108352",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "permission_balance",
+  "permission_type",
+  "employee",
+  "employee_name",
+  "employee_designation",
+  "employee_branch",
+  "approval",
+  "column_break_3",
+  "for_date",
+  "from_time",
+  "to_time",
+  "amended_from",
+  "time_diffnt",
+  "permission_up_to_month",
+  "monthly_balance"
+ ],
+ "fields": [
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Series",
+   "options": "PER/",
+   "reqd": 1
+  },
+  {
+   "fieldname": "permission_balance",
+   "fieldtype": "Float",
+   "label": "Permission Balance Before Application",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "permission_type",
+   "fieldtype": "Select",
+   "label": "Permission Type",
+   "options": "Middle Day\nLate Attend\nEarly leave",
+   "reqd": 1
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Read Only",
+   "label": "Employee Name"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "for_date",
+   "fieldtype": "Date",
+   "label": "For Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "from_time",
+   "fieldtype": "Datetime",
+   "label": "From Time"
+  },
+  {
+   "fieldname": "to_time",
+   "fieldtype": "Datetime",
+   "label": "To Time"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Permission",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "permission_up_to_month",
+   "fieldtype": "Float",
+   "label": "Total monthly  permissions in  minutes ",
+   "read_only": 1
+  },
+  {
+   "fieldname": "time_diffnt",
+   "fieldtype": "Float",
+   "label": "Permission period in minutes ",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.designation",
+   "fieldname": "employee_designation",
+   "fieldtype": "Link",
+   "label": "Employee Designation",
+   "options": "Designation",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.branch",
+   "fieldname": "employee_branch",
+   "fieldtype": "Link",
+   "label": "Employee Branch",
+   "options": "Branch",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "employee.leave_approver",
+   "fieldname": "approval",
+   "fieldtype": "Link",
+   "label": "Approval",
+   "options": "User",
+   "read_only": 1
+  },
+  {
+   "fieldname": "monthly_balance",
+   "fieldtype": "Float",
+   "label": "Monthly Balance",
+   "read_only": 1
+  }
+ ],
+ "icon": "fa fa-calendar",
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-11-04 13:51:17.097726",
+ "modified_by": "Administrator",
+ "module": "Employee Attendance",
+ "name": "Permission",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Employee",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "employee,employee_name,for_date",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "timeline_field": "employee",
+ "title_field": "employee_name",
+ "track_changes": 1
+}

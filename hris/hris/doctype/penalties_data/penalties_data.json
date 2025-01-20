@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "creation": "2018-03-26 17:15:46.691063",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "times",
+  "deduct_value",
+  "deduct_value_type",
+  "from_total_earnings",
+  "deduct_value_of"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "times",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Times",
+   "options": "\n1\n2\n3\n4",
+   "reqd": 1
+  },
+  {
+   "fieldname": "deduct_value",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Deduct Value",
+   "reqd": 1
+  },
+  {
+   "fieldname": "deduct_value_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Deduct Value Type",
+   "options": "Deduct Type",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.from_total_earnings==0",
+   "fieldname": "deduct_value_of",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Deduct Value Of",
+   "mandatory_depends_on": "eval:doc.from_total_earnings==0",
+   "options": "Salary Component",
+   "read_only_depends_on": "from_total_earnings",
+   "reqd": 1
+  },
+  {
+   "columns": 2,
+   "default": "0",
+   "fieldname": "from_total_earnings",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "From Total Earnings"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2022-11-19 11:11:10.174200",
+ "modified_by": "Administrator",
+ "module": "HRIS",
+ "name": "Penalties Data",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

@@ -1,0 +1,147 @@
+{
+ "charts": [],
+ "content": "[{\"id\":\"dxkznnFSuz\",\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">HRIS</span>\",\"col\":12}},{\"id\":\"26q37zDoFE\",\"type\":\"card\",\"data\":{\"card_name\":\"Penalties\",\"col\":4}},{\"id\":\"3QnTJtkQ6b\",\"type\":\"card\",\"data\":{\"card_name\":\"Deduct \",\"col\":4}},{\"id\":\"cIlmJvf3HG\",\"type\":\"card\",\"data\":{\"card_name\":\"Emploee\",\"col\":4}}]",
+ "creation": "2024-11-04 12:59:45.780997",
+ "custom_blocks": [],
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "fal fa-cube",
+ "idx": 0,
+ "indicator_color": "light-blue",
+ "is_hidden": 0,
+ "label": "HRIS",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penalties",
+   "link_count": 4,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Employee Penalties",
+   "link_count": 0,
+   "link_to": "Employee Penalties",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penalties Data",
+   "link_count": 0,
+   "link_to": "Penalties Data",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penalty Type",
+   "link_count": 0,
+   "link_to": "Penalty Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Penalties Settings",
+   "link_count": 0,
+   "link_to": "Penalties Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Deduct ",
+   "link_count": 1,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Deduct Type",
+   "link_count": 0,
+   "link_to": "Deduct Type",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Emploee",
+   "link_count": 3,
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Contract",
+   "link_count": 0,
+   "link_to": "Contract",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "End of Service",
+   "link_count": 0,
+   "link_to": "End of Service",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Nationality",
+   "link_count": 0,
+   "link_to": "Nationality",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2024-12-08 16:01:59.842546",
+ "modified_by": "support@hwsba.com",
+ "module": "HRIS",
+ "name": "HRIS",
+ "number_cards": [],
+ "owner": "support@hwsba.com",
+ "parent_page": "",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [
+  {
+   "role": "HR Manager"
+  },
+  {
+   "role": "HR User"
+  },
+  {
+   "role": "System Manager"
+  }
+ ],
+ "sequence_id": 41.0,
+ "shortcuts": [],
+ "title": "HRIS"
+}

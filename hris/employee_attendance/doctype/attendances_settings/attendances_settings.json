@@ -1,0 +1,135 @@
+{
+ "actions": [],
+ "creation": "2018-07-04 14:06:44.669078",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "attendance_time_margin",
+  "max_limit_for_attendance",
+  "column_break_2",
+  "leave_time_margin",
+  "permissions",
+  "permission_based_on",
+  "no_of_permissions",
+  "permission_minutes",
+  "attendance_dates_tab",
+  "start_day",
+  "column_break_gfzr",
+  "end_day"
+ ],
+ "fields": [
+  {
+   "description": "value in minutes\n\n",
+   "fieldname": "attendance_time_margin",
+   "fieldtype": "Int",
+   "label": "Attendance Time Margin (Before Period Start Time)"
+  },
+  {
+   "description": "value in minutes\n\n",
+   "fieldname": "max_limit_for_attendance",
+   "fieldtype": "Int",
+   "label": "Max Limit Form Attendance Time( Include Attendance Permissibility)"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "value in minutes",
+   "fieldname": "leave_time_margin",
+   "fieldtype": "Int",
+   "label": "Leave Time Margin (After Period End Time)"
+  },
+  {
+   "fieldname": "permissions",
+   "fieldtype": "Section Break",
+   "label": "Permissions"
+  },
+  {
+   "fieldname": "permission_based_on",
+   "fieldtype": "Select",
+   "label": "Permission Based On ",
+   "options": "\nNumber Of Permissions Per Month\nMinutes Per Month"
+  },
+  {
+   "depends_on": "eval:doc.permission_based_on == \"Number Of Permissions Per Month\"",
+   "fieldname": "no_of_permissions",
+   "fieldtype": "Int",
+   "label": "Number Of  Permissions"
+  },
+  {
+   "depends_on": "eval:doc.permission_based_on == \"Minutes Per Month\"",
+   "fieldname": "permission_minutes",
+   "fieldtype": "Int",
+   "label": "Permission Minutes"
+  },
+  {
+   "fieldname": "attendance_dates_tab",
+   "fieldtype": "Tab Break",
+   "label": "Attendance Dates"
+  },
+  {
+   "fieldname": "column_break_gfzr",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_day",
+   "fieldtype": "Select",
+   "label": "Start Day",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31"
+  },
+  {
+   "fieldname": "end_day",
+   "fieldtype": "Select",
+   "label": "End Day",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31"
+  }
+ ],
+ "icon": "fa fa-cog",
+ "issingle": 1,
+ "links": [],
+ "modified": "2024-11-04 13:46:01.949719",
+ "modified_by": "Administrator",
+ "module": "Employee Attendance",
+ "name": "Attendances Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "creation": "2018-06-26 18:21:01.984791",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "uid",
+  "user_id",
+  "employee",
+  "timestamp",
+  "status",
+  "device",
+  "data_retrieve__time"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_id",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "User Id"
+  },
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee"
+  },
+  {
+   "fieldname": "timestamp",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "timestamp"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Check In\nCheck Out\nUndefined"
+  },
+  {
+   "fieldname": "device",
+   "fieldtype": "Link",
+   "label": "Device",
+   "options": "Device"
+  },
+  {
+   "fieldname": "data_retrieve__time",
+   "fieldtype": "Datetime",
+   "label": "Data Retrieve  Time"
+  },
+  {
+   "fieldname": "uid",
+   "fieldtype": "Data",
+   "label": "UID"
+  }
+ ],
+ "links": [],
+ "modified": "2024-11-04 13:47:09.494215",
+ "modified_by": "Administrator",
+ "module": "Employee Attendance",
+ "name": "Attendance Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

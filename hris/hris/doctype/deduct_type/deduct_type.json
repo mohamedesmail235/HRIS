@@ -1,0 +1,69 @@
+{
+ "actions": [],
+ "autoname": "field:deduct_type",
+ "creation": "2018-03-21 14:58:47.605873",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "deduct_type"
+ ],
+ "fields": [
+  {
+   "fieldname": "deduct_type",
+   "fieldtype": "Data",
+   "label": "Deduct Type",
+   "unique": 1
+  }
+ ],
+ "links": [],
+ "modified": "2024-11-04 13:58:24.699249",
+ "modified_by": "Administrator",
+ "module": "HRIS",
+ "name": "Deduct Type",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "HR User",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

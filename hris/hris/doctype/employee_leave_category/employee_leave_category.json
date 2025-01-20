@@ -1,0 +1,63 @@
+{
+ "autoname": "Prompt",
+ "creation": "2021-07-11 01:18:50.678595",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "leave",
+  "start_date",
+  "end_date",
+  "category"
+ ],
+ "fields": [
+  {
+   "fieldname": "leave",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Leave",
+   "options": "Leave Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "fieldname": "category",
+   "fieldtype": "Table",
+   "label": "Category",
+   "options": "Leave Category"
+  }
+ ],
+ "modified": "2021-09-06 02:12:51.357754",
+ "modified_by": "Administrator",
+ "module": "HRIS",
+ "name": "Employee Leave Category",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

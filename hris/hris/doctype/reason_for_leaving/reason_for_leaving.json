@@ -1,0 +1,71 @@
+{
+ "autoname": "format:{reason_for_leaving}-{contract_type}",
+ "creation": "2020-03-10 08:57:31.096331",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "reason_for_leaving",
+  "contract_type",
+  "paid",
+  "section_break_4",
+  "payment_detail"
+ ],
+ "fields": [
+  {
+   "fieldname": "reason_for_leaving",
+   "fieldtype": "Data",
+   "label": "Reason for Leaving"
+  },
+  {
+   "default": "0",
+   "fieldname": "paid",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "Paid"
+  },
+  {
+   "fieldname": "contract_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Contract Type",
+   "options": "Contract Type"
+  },
+  {
+   "depends_on": "eval:doc.paid",
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break",
+   "label": "Payment Detail"
+  },
+  {
+   "depends_on": "eval:doc.paid",
+   "fieldname": "payment_detail",
+   "fieldtype": "Table",
+   "label": "Payment Detail",
+   "options": "Payment Detail"
+  }
+ ],
+ "modified": "2020-05-07 10:26:21.332625",
+ "modified_by": "Administrator",
+"module": "HRIS",
+ "name": "Reason for Leaving",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
