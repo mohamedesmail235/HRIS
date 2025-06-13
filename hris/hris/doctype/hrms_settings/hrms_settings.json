@@ -1,0 +1,229 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2022-02-21 01:26:53.128489",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "min_age_for_emp",
+  "test_period",
+  "retirement_age_for_female",
+  "maximum_loan_percentage_cut",
+  "column_break_5",
+  "monthly_working_hours",
+  "jwt_api_secret_key",
+  "max_work_from_home_days",
+  "payroll_setting_section",
+  "indemnity_days_for_work_injuries",
+  "max_deductions_percentage_from_total_earnings",
+  "over_time_hour_range",
+  "column_break_9",
+  "calculate_leave_encasement",
+  "day_calculation",
+  "cutoff_dates_section",
+  "deductions_start_day",
+  "deductions_end_day",
+  "column_break_14",
+  "salary_slip_start_date",
+  "salary_slip_end_date",
+  "column_break_6aj54",
+  "second_half_month_start_day",
+  "second_half_month_end_day",
+  "column_break_20",
+  "first_half_month_start_day",
+  "first_half_month_end_day",
+  "bus_captains_allowance_settings_section",
+  "bus_captains_allowance_componant",
+  "column_break_scus"
+ ],
+ "fields": [
+  {
+   "fieldname": "min_age_for_emp",
+   "fieldtype": "Int",
+   "label": "Min Age For Emp"
+  },
+  {
+   "fieldname": "test_period",
+   "fieldtype": "Int",
+   "label": "Test Period"
+  },
+  {
+   "fieldname": "retirement_age_for_female",
+   "fieldtype": "Data",
+   "label": "Retirement Age For Female"
+  },
+  {
+   "fieldname": "maximum_loan_percentage_cut",
+   "fieldtype": "Data",
+   "label": "Maximum Loan Percentage Cut"
+  },
+  {
+   "fieldname": "payroll_setting_section",
+   "fieldtype": "Section Break",
+   "label": "Payroll Setting"
+  },
+  {
+   "fieldname": "indemnity_days_for_work_injuries",
+   "fieldtype": "Int",
+   "label": "Indemnity Days For Work Injuries"
+  },
+  {
+   "description": "Max Percentage of Total Monthly Deductions",
+   "fieldname": "max_deductions_percentage_from_total_earnings",
+   "fieldtype": "Percent",
+   "label": "Max Deductions Percentage from Total Earnings"
+  },
+  {
+   "fieldname": "over_time_hour_range",
+   "fieldtype": "Float",
+   "label": "Over Time Hour Range"
+  },
+  {
+   "fieldname": "column_break_9",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "calculate_leave_encasement",
+   "fieldtype": "Select",
+   "label": "Calculate Leave Encasement",
+   "options": "\nDay Rate\nDuration of practical service"
+  },
+  {
+   "fieldname": "day_calculation",
+   "fieldtype": "Select",
+   "label": "Day Calculation",
+   "options": "Calendar\n360\n365"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "monthly_working_hours",
+   "fieldtype": "Float",
+   "label": "Monthly Working Hours"
+  },
+  {
+   "fieldname": "column_break_14",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "16",
+   "fieldname": "deductions_start_day",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Deductions Start Day",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31",
+   "reqd": 1
+  },
+  {
+   "default": "15",
+   "fieldname": "deductions_end_day",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Deductions End Day",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31",
+   "reqd": 1
+  },
+  {
+   "fieldname": "cutoff_dates_section",
+   "fieldtype": "Section Break",
+   "label": "Cutoff Dates"
+  },
+  {
+   "fieldname": "first_half_month_start_day",
+   "fieldtype": "Select",
+   "label": "Day 15 Start Day",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31"
+  },
+  {
+   "fieldname": "first_half_month_end_day",
+   "fieldtype": "Select",
+   "label": "Day 15 End Day",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31"
+  },
+  {
+   "fieldname": "column_break_20",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "second_half_month_start_day",
+   "fieldtype": "Select",
+   "label": "Day 5 Start Day",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31"
+  },
+  {
+   "fieldname": "second_half_month_end_day",
+   "fieldtype": "Select",
+   "label": "Day 5 End Day",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31"
+  },
+  {
+   "fieldname": "salary_slip_start_date",
+   "fieldtype": "Select",
+   "label": "Salary Slip Start Date",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31",
+   "reqd": 1
+  },
+  {
+   "fieldname": "salary_slip_end_date",
+   "fieldtype": "Select",
+   "label": "Salary Slip End Date",
+   "options": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n11\n12\n13\n14\n15\n16\n17\n18\n19\n20\n21\n22\n23\n24\n25\n26\n27\n28\n29\n30\n31",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_6aj54",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "jwt_api_secret_key",
+   "fieldtype": "Data",
+   "label": "JWT API Secret Key"
+  },
+  {
+   "fieldname": "bus_captains_allowance_settings_section",
+   "fieldtype": "Section Break",
+   "label": " Bus Captains Allowance settings"
+  },
+  {
+   "fieldname": "column_break_scus",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "bus_captains_allowance_componant",
+   "fieldtype": "Link",
+   "label": " Bus Captains Allowance Componant",
+   "options": "Salary Component"
+  },
+  {
+   "fieldname": "max_work_from_home_days",
+   "fieldtype": "Float",
+   "label": "max_work_from_home_days"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2025-03-16 11:57:39.098912",
+ "modified_by": "Administrator",
+ "module": "HRIS",
+ "name": "HRMS Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
