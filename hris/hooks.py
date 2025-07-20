@@ -129,9 +129,9 @@ app_license = "mit"
 # ---------------
 # Override standard doctype classes
 
-# override_doctype_class = {
-# 	"ToDo": "custom_app.overrides.CustomToDo"
-# }
+override_doctype_class = {
+	"Payroll Entry": "hris.overrides.payroll_entry.CustomPayrollEntry"
+}
 
 # Document Events
 # ---------------
